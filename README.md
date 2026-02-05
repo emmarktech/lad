@@ -1,5 +1,12 @@
 Telegram @nxjayce
 
+<div align="center">
+  <video src="preview.mp4" width="100%" controls title="Project Preview">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
 ## 1. What needs to be changed:
 1. decoded_axiom.js
 - line 77: change the link to the domain with the backend part (server, api, ...)
