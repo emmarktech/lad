@@ -1,6 +1,5 @@
 Telegram @nxjayce
 
-
 ## 1. What needs to be changed:
 1. decoded_axiom.js
 - line 77: change the link to the domain with the backend part (server, api, ...)
